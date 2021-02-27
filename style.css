@@ -1,106 +1,244 @@
-/*
-    CSS is akward, getting images centered is annoying.
-*/
+/* Default Stuff */
 
 body {
-    background-color: #595A61;
+  background-color: #595a61;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
 }
-/*
-    Forced Margins to space out blocks
-*/
-.pageBlock {
-    margin: auto;
-    margin-top: 10px;
-    padding: 5px;
-    background-color: #2f3136;
-    width: 940px;
-}
+
+/* Header Stuff */
 
 header {
-    background-color: #2f3136;
+  background-color: #2f3136;
+  min-height: 88px;
+  margin-bottom: 32px;
 }
+header h1 {
+  font-family: "Arial";
+  font-size: 16px;
+  color: #bcbcc2;
+  text-align: center;
+  margin: 0;
+  padding-top: 16px;
+}
+header nav {
+  display: flex;
+  justify-content: center;
+}
+header nav ul {
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+}
+header nav ul li a {
+  font-family: Montserrat;
+  color: #595a61;
+  text-decoration: none;
+  margin: 0 16px 0 0;
+}
+header nav ul li:last-child a {
+  margin-right: 0;
+}
+header nav ul li a:hover {
+  color: #6d6e75;
+}
+
+/* Footer Stuff */
 
 footer {
-    margin-top: 10px;
-    padding: 5px;
-    background-color: #2f3136;
+  background-color: #2f3136;
+  margin-top: auto;
+  min-height: 80px;
 }
-/*
-    Forced Sizing to get images Centered correctly, need to fix
-*/
+footer h6 {
+  font-family: "Arial";
+  font-size: 8px;
+  color: #bcbcc2;
+  text-align: center;
+  margin: 0;
+  padding-top: 4px;
+}
+footer nav {
+  display: flex;
+  justify-content: center;
+}
+footer nav ul {
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+}
+footer nav ul li a {
+  color: #595a61;
+  margin: 0 16px 0 0;
+}
+
+/* Flex Container and Item Stuff */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.item {
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.pageBlock {
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 5px;
+  background-color: #2f3136;
+  border-radius: 16px;
+  min-width: 90%;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
 .imageBlock {
-    float: right;
-    margin: auto;
-    margin-top: 5px;
+  margin: auto;
+  margin-top: 5px;
+  width: 100%;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  flex: 1;
+  margin: 10px;
+}
+
+.item-double {
+  flex: 2;
+}
+
+/* Mosaic Formatting */
+
+.mosaic {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: space-between;
+  /*height: 1800px;*/
+  height: 80vh;
+}
+
+.mosaic-item {
+  position: relative;
+
+  max-width: 32%;
+  margin-bottom: 2%;
+}
+
+
+
+.mosaic-item:nth-child(3n + 1) {
+  order: 1;
+}
+.mosaic-item:nth-child(3n + 2) {
+  order: 2;
+}
+.mosaic-item:nth-child(3n) {
+  order: 3;
+}
+
+.mosaic::before,
+.mosaic::after {
+  content: "";
+  flex-basis: 100%;
+  width: 0;
+  order: 2;
+}
+
+/* Format for PC and Tablet Stuff */
+
+@media all and (min-width: 768px) {
+  /* Header Stuff */
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 8px;
+    min-height: 64px;
+  }
+
+  header h1 {
+    font-size: 16px;
+    margin: 16px 0;
+    padding-top: 6px;
+  }
+
+  header nav {
+    margin-top: 4px;
+  }
+
+  header nav ul li a:hover {
+    color: #6d6e75;
+  }
+
+  /* Footer Stuff */
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 8px;
+  }
+
+  footer h6 {
+    text-align: right;
+  }
+
+  /* Flex Container and Item Stuff */
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .item {
+    height: 40px;
+    margin-bottom: 10px;
+  }
+
+  .imageBlock {
     width: 600px;
     height: 310px;
+  }
+
+  .group {
+    flex-direction: row;
+  }
+
+  .mosaic {
+    height: 100vh;
+  }
 }
 
-.textBlock {
-    margin: auto;
-    margin-top: 5px;
-    width: 800px;
-    text-align: left;
+@media all and (min-width: 992px) {
+  .mosaic {
+    height: 133vh;
+  }
 }
 
-nav {
-    font-family: "Arial" Arial, Helvetica, sans-serif;
-    font-size: 18px;
-    color: #ffffff;
-    text-align: right;
-    margin-right: 10px;
+@media all and (min-width: 1200px) {
+  .mosaic {
+    height: 158vh;
+  }
 }
 
-img {
-    height: 300px;
-}
-
-h1 {
-    font-family: Arial, Tahoma, sans-serif;
-    font-size: 22px;
-    color: #ffffff;
-    letter-spacing: 1px;
-    text-align: left;
-}
-
-h2, h3 {
-    font-family: Arial, Tahoma, sans-serif;
-    font-size: 22px;
-    color: #ffffff;
-    letter-spacing: 1px;
-    text-align: center;
-}
-
-h4 {
-    font-family: Arial, Tahoma, sans-serif;
-    font-size: 18px;
-    color: #ffffff;
-    letter-spacing: 1px;
-    text-align: center;
-}
-
-h6, p, a, ul, ol {
-    font-family: Arial, Tahoma, sans-serif;
-    font-size: 18px;
-    color: #ffffff;
-}
-/*
-    Spacer so blocks correctly cover all content within
-*/
-.pageBlock:after {
-    content: " ";
-    display: table;
-    clear: both;
-}
-/*
-    Hover for Displaying Link Info
-*/
-h5 {
-    display: none;
-    background-color: teal;
-    padding: 10px;
-}
-
-div:hover h5 {
-    display: block;
+@media all and (min-width: 1400px) {
+  .mosaic {
+    height: 184vh;
+  }
 }

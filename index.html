@@ -17,11 +17,11 @@
     <header>
         <h1>Jonathon Hopkins [Alcor Salvador]</h1>
         <nav>
-            <ul id="menu">
-                <li><a href="/">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
+            <ul id="home">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -29,13 +29,64 @@
     <main>
         <div class="pageBlock">
             <div class="imageBlock">
-                <img src="images/magma-dragoon.png" alt="MMZR Character Art for Spiral Pegasus." class="center"/>
+                <img src="images/papillion.png" alt="MMZR Character Art for Papillion." class="center" />
             </div>
         </div>
 
+        <!-- Yup, this is Text -->
+        <article class="pageBlock">
+            <section class="center textBlock">
+                <h2 id="about">About Me</h2>
+            </section>
+            <section class="center textBlock">
+                <p>I'm a fan of JavaScript, which has lead me to desiring more in both
+                    the app development side as well as the front end people interface with. I've been working on a
+                    project with a group of friends that I hold dear, even though I am not able to contribute as much as
+                    I would like these days. The Art you see all over is from this project. I'm hoping to use the
+                    knowledge and skills to both further my Career, as well as, further my passion.</p>
+            </section>
+        </article>
+
         <div class="pageBlock">
-            
+            <section class="center textBlock">
+                <h2 id="projects">Projects</h2>
+            </section>
+            <div class="container mosaic mt-3">
+                <img src="images/yes1.jpg" class="mosaic-item rounded" alt="...">
+                <img src="images/yes2.png" class="mosaic-item rounded" alt="...">
+                <img src="images/yes1.jpg" class="mosaic-item rounded" alt="...">
+                <img src="images/yes2.png" class="mosaic-item rounded" alt="...">
+                <img src="images/yes1.jpg" class="mosaic-item rounded" alt="...">
+                <img src="images/yes2.png" class="mosaic-item rounded" alt="...">
+                <img src="images/yes1.jpg" class="mosaic-item rounded" alt="...">
+                <img src="images/yes2.png" class="mosaic-item rounded" alt="...">
+                <img src="images/yes1.jpg" class="mosaic-item rounded" alt="...">
+                <img src="images/yes2.png" class="mosaic-item rounded" alt="...">
+            </div>
         </div>
+
+        <article class="pageBlock">
+            <section class="center textBlock">
+                <h2 id="contact">Contact</h2>
+            </section>
+            <section class="center textBlock">
+                <form action="https://formspree.io/heru1134490589625@gmail.com" method="post">
+                    <label class="center textBlock" for="user-name">Name:</label>
+                    <input class="center textBlock" id="user-name" type="text" placeholder="Last, First" required />
+                    <label class="center textBlock" for="email">Email:</label>
+                    <input class="center textBlock" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
+                        id="email" type="text" placeholder="example@email.com" required />
+                    <label class="center textBlock" for="form-message">Message:</label>
+                    <textarea class="center textBlock" id="form-message" placeholder="Message Contents" maxlength="200"
+                        required></textarea>
+                    <hr>
+                    <div class="center textBlock">
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </section>
+        </article>
+
     </main>
 
     <footer>

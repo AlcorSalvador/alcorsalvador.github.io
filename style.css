@@ -6,6 +6,7 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
+  color: #6d6e75;
 }
 
 /* Header Stuff */
@@ -22,6 +23,9 @@ header h1 {
   text-align: center;
   margin: 0;
   padding-top: 16px;
+}
+h2 {
+  justify-content: center;
 }
 header nav {
   display: flex;
@@ -81,10 +85,6 @@ footer nav ul li a {
   flex-direction: column;
   align-items: center;
 }
-.item {
-  height: 40px;
-  margin-bottom: 10px;
-}
 
 .pageBlock {
   margin: auto;
@@ -93,7 +93,7 @@ footer nav ul li a {
   padding: 5px;
   background-color: #2f3136;
   border-radius: 16px;
-  min-width: 90%;
+  max-width: 95%;
 }
 
 .center {
@@ -109,18 +109,31 @@ footer nav ul li a {
   width: 100%;
 }
 
-.group {
+.textBlock {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  flex: column;
+  width: 75%;
 }
 
-.item {
-  flex: 1;
-  margin: 10px;
+form {
+  width: 100%;
 }
 
-.item-double {
-  flex: 2;
+form label {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #6d6e75;
+}
+
+form input[type="text"] {
+  color: #2f3136;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+textarea {
+  height: 125px;
 }
 
 /* Mosaic Formatting */
@@ -129,18 +142,14 @@ footer nav ul li a {
   display: flex;
   flex-flow: column wrap;
   align-content: space-between;
-  /*height: 1800px;*/
   height: 80vh;
 }
 
 .mosaic-item {
   position: relative;
-
   max-width: 32%;
   margin-bottom: 2%;
 }
-
-
 
 .mosaic-item:nth-child(3n + 1) {
   order: 1;
@@ -206,18 +215,9 @@ footer nav ul li a {
     align-items: center;
   }
 
-  .item {
-    height: 40px;
-    margin-bottom: 10px;
-  }
-
   .imageBlock {
     width: 600px;
     height: 310px;
-  }
-
-  .group {
-    flex-direction: row;
   }
 
   .mosaic {
@@ -240,5 +240,8 @@ footer nav ul li a {
 @media all and (min-width: 1400px) {
   .mosaic {
     height: 184vh;
+  }
+  .textBlock {
+    width: 50%;
   }
 }

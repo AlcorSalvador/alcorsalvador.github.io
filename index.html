@@ -70,18 +70,18 @@
                 <h2 id="contact">Contact</h2>
             </section>
             <section class="center textBlock">
-                <form action="https://formspree.io/f/xwkwjgnr" method="post">
+                <form action="https://formspree.io/f/xwkwjgnr" method="POST">
                     <label class="center textBlock" for="user-name">Name:</label>
                     <input class="center textBlock" id="user-name" type="text" placeholder="Last, First" name="name" required />
                     <label class="center textBlock" for="email">Email:</label>
-                    <input class="center textBlock" name="email" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
+                    <input class="center textBlock" name="_replyto" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
                         id="email" type="text" placeholder="example@email.com" required />
                     <label class="center textBlock" for="form-message">Message:</label>
                     <textarea class="center textBlock" id="form-message" name="form-message" placeholder="Message Contents" maxlength="200"
                         required></textarea>
                     <hr>
                     <div class="center textBlock">
-                        <button type="submit">Submit</button>
+                        <button type="submit">Send</button>
                     </div>
                 </form>
             </section>
